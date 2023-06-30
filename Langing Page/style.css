@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: 0;
+}
+.landing {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(cottage.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  animation: landing-anim 4s forwards;
+}
+@keyframes landing-anim {
+  0%,
+  50% {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  100% {
+    clip-path: polygon(50% 0%, 95% 30%, 95% 100%, 5% 100%, 5% 30%);
+    background-position: center bottom;
+  }
+}
+.background {
+  width: 100%;
+  height: 100vh;
+  background-color: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1px;
+  transform-origin: top;
+  animation: bg-anim 2s forwards;
+}
+@keyframes bg-anim {
+  0%,
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
